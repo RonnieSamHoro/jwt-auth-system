@@ -92,40 +92,39 @@ Create a new account or use these test credentials:
 
 ## 📁 Project Structure
 
-jwt-auth-system/
-├── frontend/ # React frontend application
-│ ├── public/ # Static public assets
-│ ├── src/
-│ │ ├── components/ # React components
-│ │ │ ├── Login.jsx # Login form component
-│ │ │ ├── Register.jsx # Registration form component
-│ │ │ ├── Dashboard.jsx # User dashboard component
-│ │ │ ├── ProtectedRoute.jsx # Route protection wrapper
-│ │ │ ├── PasswordStrengthMeter.jsx # Password validation component
-│ │ │ ├── SessionTimeoutWarning.jsx # Session management modal
-│ │ │ └── DarkModeToggle.jsx # Theme toggle component
-│ │ ├── contexts/ # React contexts
-│ │ │ ├── AuthContext.jsx # Authentication state management
-│ │ │ └── DarkModeContext.jsx # Theme state management
-│ │ ├── services/ # API services
-│ │ │ └── api.js # Axios configuration and API calls
-│ │ ├── App.jsx # Main app component
-│ │ ├── main.jsx # React entry point
-│ │ └── index.css # Global styles and Tailwind imports
-│ ├── package.json # Frontend dependencies
-│ ├── vite.config.js # Vite configuration
-│ └── tailwind.config.js # Tailwind CSS configuration
-├── backend/ # Node.js backend application
-│ ├── models/ # Database models
-│ │ └── User.js # User schema and model
-│ ├── middleware/ # Express middleware
-│ │ └── auth.js # JWT authentication middleware
-│ ├── server.js # Main server file
-│ ├── package.json # Backend dependencies
-│ └── .env # Environment variables (not in repo)
-├── .gitignore # Git ignore rules
-├── README.md # Project documentation
-└── LICENSE # MIT license file
+### **Frontend (React Application)**
+- `frontend/public/` - Static public assets
+- `frontend/src/components/` - React components
+  - `Login.jsx` - Login form component
+  - `Register.jsx` - Registration form component
+  - `Dashboard.jsx` - User dashboard component
+  - `ProtectedRoute.jsx` - Route protection wrapper
+  - `PasswordStrengthMeter.jsx` - Password validation component
+  - `SessionTimeoutWarning.jsx` - Session management modal
+  - `DarkModeToggle.jsx` - Theme toggle component
+- `frontend/src/contexts/` - React contexts
+  - `AuthContext.jsx` - Authentication state management
+  - `DarkModeContext.jsx` - Theme state management
+- `frontend/src/services/` - API services
+  - `api.js` - Axios configuration and API calls
+- `frontend/src/App.jsx` - Main app component
+- `frontend/src/main.jsx` - React entry point
+- `frontend/src/index.css` - Global styles and Tailwind imports
+
+### **Backend (Node.js Application)**
+- `backend/models/` - Database models
+  - `User.js` - User schema and model
+- `backend/middleware/` - Express middleware
+  - `auth.js` - JWT authentication middleware
+- `backend/server.js` - Main server file
+- `backend/package.json` - Backend dependencies
+- `backend/.env` - Environment variables (not in repo)
+
+### **Root Files**
+- `.gitignore` - Git ignore rules
+- `README.md` - Project documentation
+- `LICENSE` - MIT license file
+```
 
 
 ## 🧪 Testing
