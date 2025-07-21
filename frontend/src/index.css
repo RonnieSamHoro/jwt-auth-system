@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Synchronized smooth transitions for all elements */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #fafafa;
+  /* Match card transition timing */
+  transition: background-color 0.5s ease 0.2s, color 0.5s ease 0.2s;
+}
+
+/* Dark mode with same timing as cards */
+.dark body {
+  background-color: #000000;
+  color: #f9f9f9;
+  /* Same smooth transition */
+  transition: background-color 0.5s ease 0.2s, color 0.5s ease 0.2s;
+}
+
+/* Text elements with synchronized timing */
+.text-transition {
+  transition: color 0.5s ease 0.3s;
+}
+
+.dark .text-transition {
+  color: #f9f9f9;
+  transition: color 0.5s ease 0.3s;
+}
+
+/* Heading transitions perfectly synchronized */
+.heading-transition {
+  transition: color 0.5s ease 0.25s;
+}
+
+.dark .heading-transition {
+  color: #ffffff;
+  transition: color 0.5s ease 0.25s;
+}
+
+/* Card backgrounds - now perfectly in sync with body */
+.card-transition {
+  transition: background-color 0.5s ease 0.2s, border-color 0.5s ease 0.2s;
+}
+
+.dark .card-transition {
+  background-color: #111111;
+  border-color: #333333;
+  transition: background-color 0.5s ease 0.2s, border-color 0.5s ease 0.2s;
+}
+
+/* Input fields with matching timing */
+.input-transition {
+  transition: border-color 0.5s ease 0.25s, color 0.5s ease 0.25s;
+}
+
+.dark .input-transition {
+  border-color: #444444;
+  color: #f9f9f9;
+  transition: border-color 0.5s ease 0.25s, color 0.5s ease 0.25s;
+}
+
+.dark .input-transition:focus {
+  border-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.dark .input-transition::placeholder {
+  color: #888888;
+}
+
+/* Button transitions synchronized */
+.button-transition {
+  transition: background-color 0.5s ease 0.2s, color 0.5s ease 0.2s;
+}
+
+.dark .button-light {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s ease 0.2s, color 0.5s ease 0.2s;
+}
+
+.dark .button-light:hover {
+  background-color: #e5e5e5;
+  transition: background-color 0.2s ease;
+}
+
+/* Additional elements for perfect sync */
+.page-transition {
+  transition: background-color 0.5s ease 0.2s;
+}
+
+/* Smooth toggle button transitions */
+.toggle-transition {
+  transition: all 0.5s ease 0.1s;
+}
+
+/* Smooth slide transitions for password meter */
+.password-meter-enter {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.password-meter-enter-active {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.password-meter-exit {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.password-meter-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth individual requirement animations */
+.requirement-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.requirement-item.checked {
+  color: #10b981;
+  transform: translateX(2px);
+}
